@@ -1,6 +1,7 @@
 import csv
 from collections import deque
 
+
 class Queue(deque):
     def __init__(self, csv_pontos="./utils/cordinates.csv"):
         super().__init__()
@@ -13,9 +14,9 @@ class Queue(deque):
                 self.x, self.y, self.theta = [float(x) for x in row]
                 new_position = {"x": self.x, "y": self.y, "theta": self.theta}
                 self.enqueue(new_position)
-        
+
     def enqueue(self, x):
         super().append(x)
-        
+
     def dequeue(self):
         return super().popleft()
