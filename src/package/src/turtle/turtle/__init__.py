@@ -1,5 +1,7 @@
 import rclpy
-from modules import Queue, Stack, Controller
+from .controller import Controller
+from .queue import Queue
+from .stack import Stack
 
 def main(args=None):
     rclpy.init(args=args)
